@@ -1,0 +1,223 @@
+
+  <!-- start section header -->
+  <div id="header" class="home">
+
+    <div class="container">
+      <div class="header-content">
+        <h1>동덕여대 멋쟁이 사자처럼<br><span class="typed"></span></h1>
+        <p>새끼사자 여러분 환영합니다! :></p>
+
+        
+      </div>
+    </div>
+  </div>
+  <!-- End section header -->
+
+
+  <!-- start section about us -->
+  <div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between">
+
+        <div class="col-lg-4 ">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <img src="images/coding.jpg" class="img-responsive" alt="me">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="about-descr">
+
+            <p class="p-heading">🦁 DONGDUK WOMENS UNIVERSITY 🦁 </p>
+            <p class="separator">동덕여대 X 멋쟁이 사자처럼<br></p>
+              HACK YOUR LIFE. 내 아이디어를 <b>내 손으로</b> 실현하다.<br>
+              비전공자도 코딩을 할 수 있는 멋쟁이사자처럼!<br>
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section about us -->
+
+
+  <!-- start section services -->
+  <div id="services">
+    <div class="container">
+
+        <div class="services-carousel owl-theme">
+          
+          <div class="services-block">
+
+            <i class="ion-social-html5-outline"></i>
+            <span>HTML</span>
+            <p class="separator">하이퍼텍스트 마크업 언어라는 의미의 웹 페이지를 위한 지배적인 마크업 언어 </p>
+
+          </div>
+          
+          <div class="services-block">
+
+            <i class="ion-social-python"></i>
+            <span>Python</span>
+            <p class="separator">1991년 프로그래머인 귀도 반 로섬이 발표한 고급 프로그래밍 언어. 플랫폼 독립적이며 인터프리터식, 객체지향적, 동적 타이핑 대화형 언어 </p>
+
+          </div>
+          
+          <div class="services-block">
+
+            <i class="ion-code"></i>
+            <span>DJANGO</span>
+            <p class="separator">파이썬으로 작성된 오픈 소스 웹 애플리케이션 프레임워크 </p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-social-javascript-outline"></i>
+            <span>JAVA SCRIPT</span>
+            <p class="separator">객체 기반의 스크립트 프로그래밍 언어</p>
+
+          </div>
+
+
+          <div class="services-block">
+
+            <i class="ion-ios-color-wand-outline"></i>
+            <span>WEB DESIGN</span>
+            <p class="separator"> </p>
+
+          </div>
+
+          
+
+          
+
+          
+
+        </div>
+
+    </div>
+
+  </div>
+  <!-- end section services -->
+
+
+  <!-- start section portfolio -->
+  <div id="portfolio" class="text-center paddsection">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>동덕멋사 7기 운영진</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="portfolio-list">
+
+            <ul class="nav list-unstyled" id="portfolio-flters">
+              <li class="filter filter-active" data-filter=".all">all</li>
+              <li class="filter" data-filter=".16">16</li>
+              <li class="filter" data-filter=".17">17</li>
+              
+            </ul>
+
+          </div>
+
+          <div class="portfolio-container">
+              
+              <%@staffs.each do |x|%>
+                  <div class="col-lg-4 col-md-6 portfolio-thumbnail all <%=x.sid%>">
+                      <a data-toggle="modal" data-target="#<%=x.name%>">
+                        <img src="images/pro.png" alt="img"> <br><br><h4><%=x.name%></h4>
+                      </a>
+                  </div>
+                  
+                  <div id="<%=x.name%>" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+
+   
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <h4><%=x.name%> <% if x.representation == true %> (대표)<% end %></h4>
+                        <p>동덕여대 <%=x.major%>&nbsp;<%=x.sid%>학번<br>
+                        <%=x.email%>
+                        </p>
+                      </div>
+                  
+                </div>
+
+              </div>
+            </div>
+                
+                
+            <%end%>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- End section portfolio -->
+
+
+
+  <!-- start sectoion contact -->
+  <div id="contact" class="paddsection">
+    <div class="container">
+      <div class="contact-block1">
+        <div class="row">
+
+          <div class="col-lg-6">
+            
+          </div>
+          <div class="col-lg-6">
+           <div class="contact-contact" style="text-align:right" >
+
+              <h2 class="mb-30">
+                
+                <a href="https://www.facebook.com/dongduklion/" target="_blank" style="color:#7eaacd"><i class="ion-social-facebook"></i></a> 
+              </h2>
+              <p>
+                자세한 사항은 FACEBOOK을 참조해주세요! <br>
+              </p>
+
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- start sectoion contact -->
+
+
+  
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/typed/typed.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
